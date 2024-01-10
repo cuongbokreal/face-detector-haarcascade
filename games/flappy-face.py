@@ -35,10 +35,13 @@ font_thickness = 2
 score = 0
 cal_score = 1
 
+#Fix chướng ngại vật grenade ra sát đỉnh hoặc đáy 
+fix_random_obstacles = 100
+
 data_obstacles = [
     {
         'x':window_width,
-        'y': random.randint(0, window_height - obstacle_size - 100),
+        'y': random.randint(0, window_height - obstacle_size - fix_random_obstacles),
         'score': cal_score
     }
 ] #mảng thông tin chứa x, y khoảng cách an toàn của chướng ngại vật (góc bên trái dưới cùng của ô trên)
@@ -66,11 +69,11 @@ while True:
 
     # Vẽ hình chữ nhật xung quanh khuôn mặt
     for (x, y, w, h) in faces:
-        cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
+        cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
         for data_obstacle in data_obstacles:#vẽ các chướng ngại vật
             
-            cv2.rectangle(frame, (data_obstacle['x'], 0), (data_obstacle['x'] + obstacle_size, data_obstacle['y']), (0, 255, 0), 2)
-            cv2.rectangle(frame, (data_obstacle['x'], data_obstacle['y'] + obstacle_size), (data_obstacle['x'] + obstacle_size, window_height), (0, 255, 0), 2)
+            cv2.rectangle(frame, (data_obstacle['x'], 0), (data_obstacle['x'] + obstacle_size, data_obstacle['y']), (0, 255, 0), -1)
+            cv2.rectangle(frame, (data_obstacle['x'], data_obstacle['y'] + obstacle_size), (data_obstacle['x'] + obstacle_size, window_height), (0, 255, 0), -1)
             
             if (x in range(data_obstacle['x'], data_obstacle['x']+(speed * 2))) and (y in range(data_obstacle['y'], data_obstacle['y']+obstacle_size) and score < data_obstacle['score']):
                 #set score
@@ -82,7 +85,7 @@ while True:
                 data_obstacles.append(
                     {
                         'x':window_width,
-                        'y': random.randint(0, window_height - obstacle_size - 50),
+                        'y': random.randint(0, window_height - obstacle_size - fix_random_obstacles),
                         'score': cal_score
                     }
                 )
