@@ -1,5 +1,5 @@
 <link href="https://cuongbokreal.github.io/face-detector-haarcascade/read-me/main.css" rel="stylesheet" />
-face-detector-haarcascade - by <span style="color:green; font-weight:900">CuongbokIT</span> (https://cuongbokit.blogspot.com/)
+face-detector-haarcascade - by <b><span style="color:green; font-weight:900">CuongbokIT</span></b> (https://cuongbokit.blogspot.com/)
 
 
 <h4>Các bước thực hiện</h4>
