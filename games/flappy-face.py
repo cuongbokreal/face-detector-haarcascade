@@ -5,6 +5,8 @@ import math
 import time
 import pyautogui #để press thoát game :))
 
+# Hiển thị thông báo
+pyautogui.alert('Tắt Vietkey hihihi \nTắt Vietkey rồi thì nhấn OK để chơi nha', 'Lưu ý trước khi chơi')
 
 # Tạo Cascade Classifier để nhận diện khuôn mặt
 faceCascade = cv2.CascadeClassifier("module/haarcascade_frontalface_default.xml")
@@ -107,6 +109,8 @@ while True:
 
     # Hiển thị điểm số lên frame
     cv2.putText(frame, f"Score: {score}", (10, 30), font, font_size, font_color, font_thickness)
+    # Copyright =))
+    cv2.putText(frame, f"Cuongbok", (window_width - 10, window_height-10), font, font_size, font_color, font_thickness)
 
     # Hiển thị frame kết quả
     cv2.imshow('Catch the Face', frame)
