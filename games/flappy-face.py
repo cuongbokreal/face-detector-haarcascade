@@ -19,12 +19,11 @@ cap = cv2.VideoCapture(0)
 cap.set(3, window_width)  # 3 là mã cho chiều rộng frame
 cap.set(4, window_height)  # 4 là mã cho chiều cao frame
 
-# Điểm số
-score = 0
-
+#tốc độ di chuyển của chướng ngại vật
 speed = 5
 
-obstacle_size = 200
+#size chướng ngại vật (chiều ngang)
+obstacle_size = 150
 
 # Font và kích thước văn bản
 font = cv2.FONT_HERSHEY_SIMPLEX
@@ -32,12 +31,14 @@ font_size = 1
 font_color = (255, 255, 255)
 font_thickness = 2
 
+# Điểm số
 score = 0
 cal_score = 1
+
 data_obstacles = [
     {
         'x':window_width,
-        'y': random.randint(0, window_height - obstacle_size - 50),
+        'y': random.randint(0, window_height - obstacle_size - 100),
         'score': cal_score
     }
 ] #mảng thông tin chứa x, y khoảng cách an toàn của chướng ngại vật (góc bên trái dưới cùng của ô trên)
