@@ -3,6 +3,8 @@ import numpy as np
 import random
 import math
 import time
+import pyautogui #để press thoát game :))
+
 
 # Tạo Cascade Classifier để nhận diện khuôn mặt
 faceCascade = cv2.CascadeClassifier("module/haarcascade_frontalface_default.xml")
@@ -98,7 +100,10 @@ while True:
                 y in range(data_obstacle['y'] + obstacle_size, window_height))
             ):
                 print(f'Bạn đã thua, điểm số của bạn là: {score}')
+                # Nhấn phím "q"
+                pyautogui.press('q')
                 break
+                
 
     # Hiển thị điểm số lên frame
     cv2.putText(frame, f"Score: {score}", (10, 30), font, font_size, font_color, font_thickness)
