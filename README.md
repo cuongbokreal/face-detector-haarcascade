@@ -12,7 +12,9 @@ Import thư viện OpenCV và tải <code>haarcascade_frontalface_default.xml</c
 <span class="hljs-comment"># Tải Haar Cascade Classifier cho khuôn mặt</span>
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + <span class="hljs-string">'haarcascade_frontalface_default.xml'</span>)
 </code></div></div></pre></li><li><p><strong>Đọc và xử lý ảnh hoặc video:</strong>
-Bạn có thể sử dụng <code>cv2.VideoCapture()</code> để đọc video từ webcam hoặc tệp tin. Sau đó, sử dụng <code>detectMultiScale()</code> để phát hiện khuôn mặt trong các khung hình.</p><pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><span class="" data-state="closed">
+Bạn có thể sử dụng <code>cv2.VideoCapture()</code> để đọc video từ webcam hoặc tệp tin. Sau đó, sử dụng <code>detectMultiScale()</code> để phát hiện khuôn mặt trong các khung hình.</p>
 
-<p>Trong đoạn mã trên, <code>detectMultiScale()</code> sẽ trả về danh sách các khuôn mặt được phát hiện trong ảnh và sau đó, vẽ hình chữ nhật xung quanh chúng.</p></li><li><p><strong>Tinh chỉnh tham số:</strong>
+<div>Truy cập code tại <a href="https://github.com/cuongbokreal/face-detector-haarcascade/blob/main/video-face-detect.py">/video-face-detect.py</a></div>
+
+<p>Trong đoạn mã ở trên, <code>detectMultiScale()</code> sẽ trả về danh sách các khuôn mặt được phát hiện trong ảnh và sau đó, vẽ hình chữ nhật xung quanh chúng.</p></li><li><p><strong>Tinh chỉnh tham số:</strong>
 Bạn có thể tinh chỉnh các tham số như <code>scaleFactor</code> và <code>minNeighbors</code> để điều chỉnh độ chính xác và hiệu suất của thuật toán. Thử nghiệm và điều chỉnh các giá trị này để phù hợp với nhu cầu của bạn.</p></li></ol><p>Lưu ý rằng ví dụ trên chỉ là một cách sử dụng cơ bản của Haar Cascade để nhận diện khuôn mặt. Bạn có thể tích hợp nó vào ứng dụng của mình và tùy chỉnh để đáp ứng yêu cầu cụ thể.</p></div></div>
