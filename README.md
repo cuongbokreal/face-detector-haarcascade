@@ -1,4 +1,7 @@
 <link href="https://cuongbokreal.github.io/face-detector-haarcascade/read-me/main.css" rel="stylesheet" />
+
+og: https://drive.google.com/drive/folders/18BNlehLVrS5oQsDZdfBxOTtaNM9dc6kN?usp=sharing
+
 face-detector-haarcascade - by <b><span style="color:green; font-weight:900">CuongbokIT</span></b> (https://cuongbokit.blogspot.com/)
 
 
